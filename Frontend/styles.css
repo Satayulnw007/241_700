@@ -1,0 +1,125 @@
+/* นำเข้าฟอนต์ Prompt เพื่อความสวยงามของภาษาไทย */
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500&display=swap');
+
+/* ตั้งค่าพื้นฐาน */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Prompt', sans-serif;
+    background-color: #f0f2f5; /* สีพื้นหลังโทนเทาฟ้าสบายตา */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* กล่องคอนเทนเนอร์หลัก */
+.container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 500px; /* จำกัดความกว้างไม่ให้ยืดเกินไป */
+    padding: 30px;
+    border-radius: 12px; /* มุมโค้งมน */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* เงาฟุ้งๆ */
+    margin: 20px;
+}
+
+/* หัวข้อฟอร์ม */
+.header {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 25px;
+    color: #0056b3;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* คลาส Utility สำหรับจัดเรียงแนวนอน */
+.flex {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* ระยะห่างระหว่าง element */
+    flex-wrap: wrap;
+}
+
+/* การจัดระยะห่างของแต่ละ Input Group */
+.form-input {
+    margin-bottom: 20px;
+}
+
+/* หัวข้อหน้า Input (เช่น ชื่อ, นามสกุล) */
+.header-form {
+    min-width: 80px; /* ความกว้างขั้นต่ำเพื่อให้ข้อความตรงกัน */
+    font-weight: 500;
+}
+
+/* กล่อง Input ทั่วไป */
+.form {
+    flex: 1; /* ยืดให้เต็มพื้นที่ที่เหลือ */
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: 'Prompt', sans-serif;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.form:focus {
+    outline: none;
+    border-color: #0056b3; /* เปลี่ยนสีขอบเมื่อคลิก */
+}
+
+/* จัดการส่วน Radio และ Checkbox */
+input[type="radio"], input[type="checkbox"] {
+    margin-right: 5px;
+    accent-color: #0056b3; /* เปลี่ยนสีตัวเลือกเป็นสีน้ำเงิน */
+    cursor: pointer;
+}
+
+/* Textarea สำหรับคำอธิบาย */
+textarea[name="description"] {
+    width: 100%;
+    height: 100px;
+    margin-top: 8px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    resize: vertical; /* ให้ยืดหดได้แค่แนวตั้ง */
+    font-family: 'Prompt', sans-serif;
+}
+
+/* จัดกึ่งกลางปุ่ม */
+.center {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* ปุ่มส่งข้อมูล */
+.button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-family: 'Prompt', sans-serif;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.button:hover {
+    background-color: #004494;
+    transform: translateY(-2px); /* ลอยขึ้นเล็กน้อยเมื่อเอาเมาส์ชี้ */
+}
+
+.button:active {
+    transform: translateY(0);
+}
